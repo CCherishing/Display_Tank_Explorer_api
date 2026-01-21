@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
-from creatures import load_species_from_csv, prepare_species_objects
+from creatures import load_species_from_csv
 import os
 
 Base_Dir = os.path.dirname(os.path.abspath(__file__))
