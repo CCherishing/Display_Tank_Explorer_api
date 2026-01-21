@@ -1,6 +1,5 @@
 import os
 import csv
-import pygame
 
 # Returns list of dictionaries from species csv
 def load_species_from_csv(path):
@@ -58,3 +57,4 @@ def prepare_species_objects(species_csv):
     return _species_objects
 
 #test run
+
