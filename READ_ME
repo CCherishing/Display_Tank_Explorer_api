@@ -1,0 +1,4 @@
+Requirements to Run:
+    flask
+    flask-cors
+    gunicorn
