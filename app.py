@@ -8,7 +8,7 @@ Data_Dir = os.path.join(Base_Dir, "data")
 species_csv = os.path.join(Data_Dir,"display_tank_species_data.csv")
 
 species = load_species_from_csv(species_csv)
-
+print("Loaded species count:", len(species))
 
 app = Flask(__name__)
 CORS(app)
