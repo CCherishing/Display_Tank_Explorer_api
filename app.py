@@ -17,10 +17,12 @@ CORS(app)
 def get_species():
     return jsonify(species)
 
-@app.route("/species/<species_id>")
+# Make species_id an integer converter and compare numerically
+@app.route("/species/<int:species_id>")
 def get_specie(species_id):
     for c in species:
-        if c["id"] == species_id:
+        # c["id"] should be an int from CSV parsing; compare numerically
+        if c.get("id") == species_id:
             return jsonify(c)
     return jsonify({"error": "Not found"}), 404
 
