@@ -25,6 +25,27 @@ def get_specie(species_id):
         if c.get("id") == species_id:
             return jsonify(c)
     return jsonify({"error": "Not found"}), 404
+#Makes species name usable on render
+@app.route("/species/<path:species_name>")
+def get_specie_by_name(species_name):
+    """
+    Lookup species by common_name (case-insensitive, space-normalized).
+
+    Examples:
+      /species/periwinkle
+      /species/Periwinkle
+      /species/manila%20clam
+    """
+    # Normalize the URL segment: lowercase and collapse multiple spaces
+    normalized_query = " ".join(species_name.lower().split())
+
+    for c in species:
+        common = (c.get("common_name") or "").strip().lower()
+        normalized_common = " ".join(common.split())
+        if normalized_common == normalized_query:
+            return jsonify(c)
+
+    return jsonify({"error": "Not found"}), 404
 
 if __name__ == "__main__":
     app.run(debug=True)
