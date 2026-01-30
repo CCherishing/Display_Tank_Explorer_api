@@ -168,7 +168,7 @@ Implementation details:
 - **Species not on render**
   - Verify the CSV row is syntactically correct (columns aligned, quotes balanced).
   - Check backend logs (on VSCode) for “Skipping species row, parse error” messages.
-  - Ensure the service on Render has redeployed successfully.
+  - Ensure the service on Render has redeployed successfully. May need to manually redeploy latest commit. (click manually deploy)
 
 - **Name-based lookup not working**
   - Confirm the `common_name` is non-empty in the CSV.
