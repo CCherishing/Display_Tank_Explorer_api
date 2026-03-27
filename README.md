@@ -8,7 +8,7 @@ Species data is stored in a CSV file and loaded by the Flask backend. The fronte
 
 High-level steps:
 
-1. Prepare sprite image(s) then add to the *images* folder
+1. Prepare sprite image(s) then add to the *images* folder in *Display_Tank_Explorer_site* repo 
 2. Edit the CSV to add a new row for your species and fill out all the relevant information (including x and y position)
 3. Commit everything to github and wait for render to redeploy
 
