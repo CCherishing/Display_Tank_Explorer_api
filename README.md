@@ -7,6 +7,9 @@ This document explains how to add new species to the Display Tank Explorer
 Species data is stored in a CSV file and loaded by the Flask backend. The frontend calls the API to render sprites and show details.
 
 High-level steps:
+Terminology: 
+sprites are the images you click. 
+species_images are the images in the popup. (code will default to sprites if no species image found)
 
 1. Prepare sprite image(s) then add it to the CSV file and add to the *images* folder in *Display_Tank_Explorer_site* repo 
 https://github.com/CCherishing/Display_Tank_Explorer_site
